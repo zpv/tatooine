@@ -17,8 +17,7 @@ pub fn write_mem<T>(process_handle: HANDLE, dw_addr: DWORD64, value: &mut T) -> 
         );
         result
     };
-
-    return match result {
+    match result {
         0 => unsafe { Err(GetLastError() as i32) },
         _ => Ok(bytes_to_write as i32)
     }

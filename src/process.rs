@@ -9,7 +9,7 @@ use std::ffi::CString;
 pub fn get_process(window_name: String) -> HANDLE {
     let window_name = CString::new(window_name).unwrap();
 
-    return unsafe {
+    unsafe {
         let window_handle = FindWindowA(std::ptr::null_mut(), window_name.as_ptr());
 
         let mut process_id: DWORD = 0;
