@@ -33,7 +33,7 @@ fn generate_multiplier_shellcode(multiplier: i32) -> [u8; 6] {
     let b4: u8 = (multiplier & 0xff) as u8;
 
     // little endian
-    [0xb9, b4, b3, b2, b1, 0x90];
+    [0xb9, b4, b3, b2, b1, 0x90]
 }
 
 fn get_input() -> String {

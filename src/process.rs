@@ -17,5 +17,5 @@ pub fn get_process(window_name: String) -> HANDLE {
 
         let process_handle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, process_id);
         process_handle
-    };
+    }
 }
